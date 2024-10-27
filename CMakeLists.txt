@@ -15,6 +15,7 @@ file(GLOB IMGUI_SOURCES
 )
 
 set(IMGUI_STATIC "no" CACHE STRING "Build as a static library")
+set(IMGUI_WCHAR32 "no" CACHE STRING "Build with ImWChar32")
 set(CMAKE_CXX_STANDARD 11)
 
 #add library and link
@@ -23,6 +24,10 @@ if (IMGUI_STATIC)
 else (IMGUI_STATIC)
     add_library(cimnodes SHARED ${IMGUI_SOURCES})
 endif (IMGUI_STATIC)
+
+if (IMGUI_WCHAR32)
+    add_definitions("-DIMGUI_USE_WCHAR32=1")
+endif(IMGUI_WCHAR32)
 
 target_compile_definitions(cimnodes PUBLIC IMGUI_DISABLE_OBSOLETE_FUNCTIONS=1)
 
