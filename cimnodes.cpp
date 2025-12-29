@@ -62,311 +62,311 @@ CIMGUI_API void ImNodesStyle_destroy(ImNodesStyle* self)
 }
 CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx)
 {
-    return imnodes::SetImGuiContext(ctx);
+    return ImNodes::SetImGuiContext(ctx);
 }
 CIMGUI_API ImNodesContext* imnodes_CreateContext()
 {
-    return imnodes::CreateContext();
+    return ImNodes::CreateContext();
 }
 CIMGUI_API void imnodes_DestroyContext(ImNodesContext* ctx)
 {
-    return imnodes::DestroyContext(ctx);
+    return ImNodes::DestroyContext(ctx);
 }
 CIMGUI_API ImNodesContext* imnodes_GetCurrentContext()
 {
-    return imnodes::GetCurrentContext();
+    return ImNodes::GetCurrentContext();
 }
 CIMGUI_API void imnodes_SetCurrentContext(ImNodesContext* ctx)
 {
-    return imnodes::SetCurrentContext(ctx);
+    return ImNodes::SetCurrentContext(ctx);
 }
 CIMGUI_API ImNodesEditorContext* imnodes_EditorContextCreate()
 {
-    return imnodes::EditorContextCreate();
+    return ImNodes::EditorContextCreate();
 }
 CIMGUI_API void imnodes_EditorContextFree(ImNodesEditorContext* noname1)
 {
-    return imnodes::EditorContextFree(noname1);
+    return ImNodes::EditorContextFree(noname1);
 }
 CIMGUI_API void imnodes_EditorContextSet(ImNodesEditorContext* noname1)
 {
-    return imnodes::EditorContextSet(noname1);
+    return ImNodes::EditorContextSet(noname1);
 }
 CIMGUI_API ImVec2_c imnodes_EditorContextGetPanning()
 {
-    return ConvertFromCPP_ImVec2(imnodes::EditorContextGetPanning());
+    return ConvertFromCPP_ImVec2(ImNodes::EditorContextGetPanning());
 }
 CIMGUI_API void imnodes_EditorContextResetPanning(const ImVec2_c pos)
 {
-    return imnodes::EditorContextResetPanning(ConvertToCPP_ImVec2(pos));
+    return ImNodes::EditorContextResetPanning(ConvertToCPP_ImVec2(pos));
 }
 CIMGUI_API void imnodes_EditorContextMoveToNode(const int node_id)
 {
-    return imnodes::EditorContextMoveToNode(node_id);
+    return ImNodes::EditorContextMoveToNode(node_id);
 }
 CIMGUI_API ImNodesIO* imnodes_GetIO()
 {
-    return &imnodes::GetIO();
+    return &ImNodes::GetIO();
 }
 CIMGUI_API ImNodesStyle* imnodes_GetStyle()
 {
-    return &imnodes::GetStyle();
+    return &ImNodes::GetStyle();
 }
 CIMGUI_API void imnodes_StyleColorsDark(ImNodesStyle* dest)
 {
-    return imnodes::StyleColorsDark(dest);
+    return ImNodes::StyleColorsDark(dest);
 }
 CIMGUI_API void imnodes_StyleColorsClassic(ImNodesStyle* dest)
 {
-    return imnodes::StyleColorsClassic(dest);
+    return ImNodes::StyleColorsClassic(dest);
 }
 CIMGUI_API void imnodes_StyleColorsLight(ImNodesStyle* dest)
 {
-    return imnodes::StyleColorsLight(dest);
+    return ImNodes::StyleColorsLight(dest);
 }
 CIMGUI_API void imnodes_BeginNodeEditor()
 {
-    return imnodes::BeginNodeEditor();
+    return ImNodes::BeginNodeEditor();
 }
 CIMGUI_API void imnodes_EndNodeEditor()
 {
-    return imnodes::EndNodeEditor();
+    return ImNodes::EndNodeEditor();
 }
 CIMGUI_API void imnodes_MiniMap(const float minimap_size_fraction,const ImNodesMiniMapLocation location,const ImNodesMiniMapNodeHoveringCallback node_hovering_callback,const ImNodesMiniMapNodeHoveringCallbackUserData node_hovering_callback_data)
 {
-    return imnodes::MiniMap(minimap_size_fraction,location,node_hovering_callback,node_hovering_callback_data);
+    return ImNodes::MiniMap(minimap_size_fraction,location,node_hovering_callback,node_hovering_callback_data);
 }
 CIMGUI_API void imnodes_PushColorStyle(ImNodesCol item,unsigned int color)
 {
-    return imnodes::PushColorStyle(item,color);
+    return ImNodes::PushColorStyle(item,color);
 }
 CIMGUI_API void imnodes_PopColorStyle()
 {
-    return imnodes::PopColorStyle();
+    return ImNodes::PopColorStyle();
 }
 CIMGUI_API void imnodes_PushStyleVar_Float(ImNodesStyleVar style_item,float value)
 {
-    return imnodes::PushStyleVar(style_item,value);
+    return ImNodes::PushStyleVar(style_item,value);
 }
 CIMGUI_API void imnodes_PushStyleVar_Vec2(ImNodesStyleVar style_item,const ImVec2_c value)
 {
-    return imnodes::PushStyleVar(style_item,ConvertToCPP_ImVec2(value));
+    return ImNodes::PushStyleVar(style_item,ConvertToCPP_ImVec2(value));
 }
 CIMGUI_API void imnodes_PopStyleVar(int count)
 {
-    return imnodes::PopStyleVar(count);
+    return ImNodes::PopStyleVar(count);
 }
 CIMGUI_API void imnodes_BeginNode(int id)
 {
-    return imnodes::BeginNode(id);
+    return ImNodes::BeginNode(id);
 }
 CIMGUI_API void imnodes_EndNode()
 {
-    return imnodes::EndNode();
+    return ImNodes::EndNode();
 }
 CIMGUI_API ImVec2_c imnodes_GetNodeDimensions(int id)
 {
-    return ConvertFromCPP_ImVec2(imnodes::GetNodeDimensions(id));
+    return ConvertFromCPP_ImVec2(ImNodes::GetNodeDimensions(id));
 }
 CIMGUI_API void imnodes_BeginNodeTitleBar()
 {
-    return imnodes::BeginNodeTitleBar();
+    return ImNodes::BeginNodeTitleBar();
 }
 CIMGUI_API void imnodes_EndNodeTitleBar()
 {
-    return imnodes::EndNodeTitleBar();
+    return ImNodes::EndNodeTitleBar();
 }
 CIMGUI_API void imnodes_BeginInputAttribute(int id,ImNodesPinShape shape)
 {
-    return imnodes::BeginInputAttribute(id,shape);
+    return ImNodes::BeginInputAttribute(id,shape);
 }
 CIMGUI_API void imnodes_EndInputAttribute()
 {
-    return imnodes::EndInputAttribute();
+    return ImNodes::EndInputAttribute();
 }
 CIMGUI_API void imnodes_BeginOutputAttribute(int id,ImNodesPinShape shape)
 {
-    return imnodes::BeginOutputAttribute(id,shape);
+    return ImNodes::BeginOutputAttribute(id,shape);
 }
 CIMGUI_API void imnodes_EndOutputAttribute()
 {
-    return imnodes::EndOutputAttribute();
+    return ImNodes::EndOutputAttribute();
 }
 CIMGUI_API void imnodes_BeginStaticAttribute(int id)
 {
-    return imnodes::BeginStaticAttribute(id);
+    return ImNodes::BeginStaticAttribute(id);
 }
 CIMGUI_API void imnodes_EndStaticAttribute()
 {
-    return imnodes::EndStaticAttribute();
+    return ImNodes::EndStaticAttribute();
 }
 CIMGUI_API void imnodes_PushAttributeFlag(ImNodesAttributeFlags flag)
 {
-    return imnodes::PushAttributeFlag(flag);
+    return ImNodes::PushAttributeFlag(flag);
 }
 CIMGUI_API void imnodes_PopAttributeFlag()
 {
-    return imnodes::PopAttributeFlag();
+    return ImNodes::PopAttributeFlag();
 }
 CIMGUI_API void imnodes_Link(int id,int start_attribute_id,int end_attribute_id)
 {
-    return imnodes::Link(id,start_attribute_id,end_attribute_id);
+    return ImNodes::Link(id,start_attribute_id,end_attribute_id);
 }
 CIMGUI_API void imnodes_SetNodeDraggable(int node_id,const bool draggable)
 {
-    return imnodes::SetNodeDraggable(node_id,draggable);
+    return ImNodes::SetNodeDraggable(node_id,draggable);
 }
 CIMGUI_API void imnodes_SetNodeScreenSpacePos(int node_id,const ImVec2_c screen_space_pos)
 {
-    return imnodes::SetNodeScreenSpacePos(node_id,ConvertToCPP_ImVec2(screen_space_pos));
+    return ImNodes::SetNodeScreenSpacePos(node_id,ConvertToCPP_ImVec2(screen_space_pos));
 }
 CIMGUI_API void imnodes_SetNodeEditorSpacePos(int node_id,const ImVec2_c editor_space_pos)
 {
-    return imnodes::SetNodeEditorSpacePos(node_id,ConvertToCPP_ImVec2(editor_space_pos));
+    return ImNodes::SetNodeEditorSpacePos(node_id,ConvertToCPP_ImVec2(editor_space_pos));
 }
 CIMGUI_API void imnodes_SetNodeGridSpacePos(int node_id,const ImVec2_c grid_pos)
 {
-    return imnodes::SetNodeGridSpacePos(node_id,ConvertToCPP_ImVec2(grid_pos));
+    return ImNodes::SetNodeGridSpacePos(node_id,ConvertToCPP_ImVec2(grid_pos));
 }
 CIMGUI_API ImVec2_c imnodes_GetNodeScreenSpacePos(const int node_id)
 {
-    return ConvertFromCPP_ImVec2(imnodes::GetNodeScreenSpacePos(node_id));
+    return ConvertFromCPP_ImVec2(ImNodes::GetNodeScreenSpacePos(node_id));
 }
 CIMGUI_API ImVec2_c imnodes_GetNodeEditorSpacePos(const int node_id)
 {
-    return ConvertFromCPP_ImVec2(imnodes::GetNodeEditorSpacePos(node_id));
+    return ConvertFromCPP_ImVec2(ImNodes::GetNodeEditorSpacePos(node_id));
 }
 CIMGUI_API ImVec2_c imnodes_GetNodeGridSpacePos(const int node_id)
 {
-    return ConvertFromCPP_ImVec2(imnodes::GetNodeGridSpacePos(node_id));
+    return ConvertFromCPP_ImVec2(ImNodes::GetNodeGridSpacePos(node_id));
 }
 CIMGUI_API void imnodes_SnapNodeToGrid(int node_id)
 {
-    return imnodes::SnapNodeToGrid(node_id);
+    return ImNodes::SnapNodeToGrid(node_id);
 }
 CIMGUI_API bool imnodes_IsEditorHovered()
 {
-    return imnodes::IsEditorHovered();
+    return ImNodes::IsEditorHovered();
 }
 CIMGUI_API bool imnodes_IsNodeHovered(int* node_id)
 {
-    return imnodes::IsNodeHovered(node_id);
+    return ImNodes::IsNodeHovered(node_id);
 }
 CIMGUI_API bool imnodes_IsLinkHovered(int* link_id)
 {
-    return imnodes::IsLinkHovered(link_id);
+    return ImNodes::IsLinkHovered(link_id);
 }
 CIMGUI_API bool imnodes_IsPinHovered(int* attribute_id)
 {
-    return imnodes::IsPinHovered(attribute_id);
+    return ImNodes::IsPinHovered(attribute_id);
 }
 CIMGUI_API int imnodes_NumSelectedNodes()
 {
-    return imnodes::NumSelectedNodes();
+    return ImNodes::NumSelectedNodes();
 }
 CIMGUI_API int imnodes_NumSelectedLinks()
 {
-    return imnodes::NumSelectedLinks();
+    return ImNodes::NumSelectedLinks();
 }
 CIMGUI_API void imnodes_GetSelectedNodes(int* node_ids)
 {
-    return imnodes::GetSelectedNodes(node_ids);
+    return ImNodes::GetSelectedNodes(node_ids);
 }
 CIMGUI_API void imnodes_GetSelectedLinks(int* link_ids)
 {
-    return imnodes::GetSelectedLinks(link_ids);
+    return ImNodes::GetSelectedLinks(link_ids);
 }
 CIMGUI_API void imnodes_ClearNodeSelection_Nil()
 {
-    return imnodes::ClearNodeSelection();
+    return ImNodes::ClearNodeSelection();
 }
 CIMGUI_API void imnodes_ClearLinkSelection_Nil()
 {
-    return imnodes::ClearLinkSelection();
+    return ImNodes::ClearLinkSelection();
 }
 CIMGUI_API void imnodes_SelectNode(int node_id)
 {
-    return imnodes::SelectNode(node_id);
+    return ImNodes::SelectNode(node_id);
 }
 CIMGUI_API void imnodes_ClearNodeSelection_Int(int node_id)
 {
-    return imnodes::ClearNodeSelection(node_id);
+    return ImNodes::ClearNodeSelection(node_id);
 }
 CIMGUI_API bool imnodes_IsNodeSelected(int node_id)
 {
-    return imnodes::IsNodeSelected(node_id);
+    return ImNodes::IsNodeSelected(node_id);
 }
 CIMGUI_API void imnodes_SelectLink(int link_id)
 {
-    return imnodes::SelectLink(link_id);
+    return ImNodes::SelectLink(link_id);
 }
 CIMGUI_API void imnodes_ClearLinkSelection_Int(int link_id)
 {
-    return imnodes::ClearLinkSelection(link_id);
+    return ImNodes::ClearLinkSelection(link_id);
 }
 CIMGUI_API bool imnodes_IsLinkSelected(int link_id)
 {
-    return imnodes::IsLinkSelected(link_id);
+    return ImNodes::IsLinkSelected(link_id);
 }
 CIMGUI_API bool imnodes_IsAttributeActive()
 {
-    return imnodes::IsAttributeActive();
+    return ImNodes::IsAttributeActive();
 }
 CIMGUI_API bool imnodes_IsAnyAttributeActive(int* attribute_id)
 {
-    return imnodes::IsAnyAttributeActive(attribute_id);
+    return ImNodes::IsAnyAttributeActive(attribute_id);
 }
 CIMGUI_API bool imnodes_IsLinkStarted(int* started_at_attribute_id)
 {
-    return imnodes::IsLinkStarted(started_at_attribute_id);
+    return ImNodes::IsLinkStarted(started_at_attribute_id);
 }
 CIMGUI_API bool imnodes_IsLinkDropped(int* started_at_attribute_id,bool including_detached_links)
 {
-    return imnodes::IsLinkDropped(started_at_attribute_id,including_detached_links);
+    return ImNodes::IsLinkDropped(started_at_attribute_id,including_detached_links);
 }
 CIMGUI_API bool imnodes_IsLinkCreated_BoolPtr(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap)
 {
-    return imnodes::IsLinkCreated(started_at_attribute_id,ended_at_attribute_id,created_from_snap);
+    return ImNodes::IsLinkCreated(started_at_attribute_id,ended_at_attribute_id,created_from_snap);
 }
 CIMGUI_API bool imnodes_IsLinkCreated_IntPtr(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap)
 {
-    return imnodes::IsLinkCreated(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap);
+    return ImNodes::IsLinkCreated(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap);
 }
 CIMGUI_API bool imnodes_IsLinkDestroyed(int* link_id)
 {
-    return imnodes::IsLinkDestroyed(link_id);
+    return ImNodes::IsLinkDestroyed(link_id);
 }
 CIMGUI_API const char* imnodes_SaveCurrentEditorStateToIniString(size_t* data_size)
 {
-    return imnodes::SaveCurrentEditorStateToIniString(data_size);
+    return ImNodes::SaveCurrentEditorStateToIniString(data_size);
 }
 CIMGUI_API const char* imnodes_SaveEditorStateToIniString(const ImNodesEditorContext* editor,size_t* data_size)
 {
-    return imnodes::SaveEditorStateToIniString(editor,data_size);
+    return ImNodes::SaveEditorStateToIniString(editor,data_size);
 }
 CIMGUI_API void imnodes_LoadCurrentEditorStateFromIniString(const char* data,size_t data_size)
 {
-    return imnodes::LoadCurrentEditorStateFromIniString(data,data_size);
+    return ImNodes::LoadCurrentEditorStateFromIniString(data,data_size);
 }
 CIMGUI_API void imnodes_LoadEditorStateFromIniString(ImNodesEditorContext* editor,const char* data,size_t data_size)
 {
-    return imnodes::LoadEditorStateFromIniString(editor,data,data_size);
+    return ImNodes::LoadEditorStateFromIniString(editor,data,data_size);
 }
 CIMGUI_API void imnodes_SaveCurrentEditorStateToIniFile(const char* file_name)
 {
-    return imnodes::SaveCurrentEditorStateToIniFile(file_name);
+    return ImNodes::SaveCurrentEditorStateToIniFile(file_name);
 }
 CIMGUI_API void imnodes_SaveEditorStateToIniFile(const ImNodesEditorContext* editor,const char* file_name)
 {
-    return imnodes::SaveEditorStateToIniFile(editor,file_name);
+    return ImNodes::SaveEditorStateToIniFile(editor,file_name);
 }
 CIMGUI_API void imnodes_LoadCurrentEditorStateFromIniFile(const char* file_name)
 {
-    return imnodes::LoadCurrentEditorStateFromIniFile(file_name);
+    return ImNodes::LoadCurrentEditorStateFromIniFile(file_name);
 }
 CIMGUI_API void imnodes_LoadEditorStateFromIniFile(ImNodesEditorContext* editor,const char* file_name)
 {
-    return imnodes::LoadEditorStateFromIniFile(editor,file_name);
+    return ImNodes::LoadEditorStateFromIniFile(editor,file_name);
 }
 
 
