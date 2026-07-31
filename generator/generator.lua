@@ -8,7 +8,7 @@ local cpp2ffi = require"cpp2ffi"
 local save_data = cpp2ffi.save_data
 local copyfile = cpp2ffi.copyfile
 --take script args---------------------------
-local COMPILER, CPRE, INTERNAL_GENERATION, COMMENTS_GENERATION = cpp2ffi.GetScriptArgs({[[IMNODES_NAMESPACE="imnodes"]]},...)
+local COMPILER, CPRE, INTERNAL_GENERATION, COMMENTS_GENERATION = cpp2ffi.GetScriptArgs({},...)
 --------------------------------------------------------------------------
 --this table has the functions to be skipped in generation
 --------------------------------------------------------------------------
@@ -53,7 +53,9 @@ local function parseImGuiHeader(header,names,modulename)
 	local parser = cpp2ffi.Parser()
 	parser.modulename = modulename
 	parser.getCname = function(stname,funcname,namespace)
-		local pre = (stname == "") and (namespace and (namespace=="ImGui" and "ig" or namespace.."_") or "ig") or stname.."_"
+		local pre = (stname == "") and (namespace and
+			(namespace == "ImGui" and "ig" or
+			 namespace == "ImNodes" and "imnodes_" or namespace.."_") or "ig") or stname.."_"
 		return pre..funcname
 	end
 	parser.cname_overloads = cimgui_overloads

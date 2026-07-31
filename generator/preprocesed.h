@@ -135,7 +135,7 @@ struct ImNodesContext;
 struct ImNodesEditorContext;
 typedef void (*ImNodesMiniMapNodeHoveringCallback)(int, void*);
 typedef void* ImNodesMiniMapNodeHoveringCallbackUserData;
-namespace imnodes
+namespace ImNodes
 {
 void SetImGuiContext(ImGuiContext* ctx);
 ImNodesContext* CreateContext();

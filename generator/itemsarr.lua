@@ -896,7 +896,7 @@ void LoadEditorStateFromIniFile(ImNodesEditorContext* editor, const char* file_n
         parent=nil,
         re_name="function_re"}},
     item="\
-namespace imnodes\
+namespace ImNodes\
 {\
 void SetImGuiContext(ImGuiContext* ctx);\
 ImNodesContext* CreateContext();\
@@ -991,7 +991,7 @@ void LoadCurrentEditorStateFromIniFile(const char* file_name);\
 void LoadEditorStateFromIniFile(ImNodesEditorContext* editor, const char* file_name);\
 }",
     locat="imnodes:240",
-    name="imnodes",
+    name="ImNodes",
     re_name="namespace_re"}}
 t[12].childs[1].childs[1].parent=t[12].childs[1]
 t[12].childs[1].childs[2].parent=t[12].childs[1]
